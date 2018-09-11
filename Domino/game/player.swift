@@ -11,15 +11,18 @@ import Foundation
 public class playr: setOfBones {
     let name: String
     
-    public override init(playerName: String) {
+    public init(playerName: String) {
         self.name = playerName
     }
     
     public func askForBone(bones: setOfBones) {
-        Dominos.append(bones.takeKnuckle())
+        let b = bones.takeKnuckle()
+        if b != nil {
+            Dominos.append(b!)
+        }
     }
     
-    public override func takeKnuckle(left: Int, right: Int) -> bone? {
+    public func takeKnuckle(left: Int, right: Int) -> bone? {
         var indicesOfMatchingTiles: [Int] = []
         for i in 0...Dominos.count-1 {
             if Dominos[i].left == left {
@@ -35,10 +38,10 @@ public class playr: setOfBones {
         if indicesOfMatchingTiles.isEmpty {
             return nil
         }
-        var resultIndex: Int
+        var resultIndex: Int = 0
         var maxSum: Int = 0
         for i in 0...indicesOfMatchingTiles.count-1 {
-            if (Dominos[indicesOfMatchingTiles[i]].left + Dominos[indicesOfMatchingTiles[i]]) > maxSum {
+            if (Dominos[indicesOfMatchingTiles[i]].left + Dominos[indicesOfMatchingTiles[i]].right) > maxSum {
                 resultIndex = indicesOfMatchingTiles[i]
                 maxSum = Dominos[indicesOfMatchingTiles[i]].left + Dominos[indicesOfMatchingTiles[i]].right
             }

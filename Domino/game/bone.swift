@@ -10,10 +10,10 @@ import Foundation
 
 // Кость, имеет две стороны, инициируется двумя числами.
 public class bone {
-    let right: int
-    let left: int
+    let right: Int
+    let left: Int
     
-    public init(leftValue: int, rightValue: int) {
+    public init(leftValue: Int, rightValue: Int) {
         self.left = leftValue
         self.right = rightValue
 }

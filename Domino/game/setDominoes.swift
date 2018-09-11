@@ -9,27 +9,27 @@
 import Foundation
 
 public class setOfBones {
-    var Dominos: [bone]
+    var Dominos: [bone] = []
     
     public init() {
-        let ziro = bone(0, 0)
-        Dominos.append(ziro)
+        let doubleZero = bone(leftValue: 0, rightValue: 0)
+        self.Dominos.append(doubleZero)
         for i in 0...5 {
             for j in i...6 {
-                Dominos.append(bone(i, j))
+                self.Dominos.append(bone(leftValue: i, rightValue: j))
             }
         }
-        let doubleSix: bone = bone(6, 6)
-        Dominos.append(doubleSix)
+        let doubleSix = bone(leftValue: 6, rightValue: 6)
+        self.Dominos.append(doubleSix)
     }
     
     public func takeKnuckle() -> bone? {
         if Dominos.count == 0 {
             return nil
         }
-        let number = arc4random_uniform(Dominos.count - 1)
-        let returnBone: bone = Dominos[number]
-        Dominos.remove(at: number)
+        let number = arc4random_uniform(UInt32(Dominos.count))
+        let returnBone: bone = Dominos[Int(number)]
+        Dominos.remove(at: Int(number))
         return returnBone
     }
 }
