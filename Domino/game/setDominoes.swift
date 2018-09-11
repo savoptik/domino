@@ -14,11 +14,13 @@ public class setOfBones {
     public init() {
         let ziro = bone(0, 0)
         Dominos.append(ziro)
-        for i in 0...6 {
+        for i in 0...5 {
             for j in i...6 {
                 Dominos.append(bone(i, j))
             }
         }
+        let doubleSix: bone = bone(6, 6)
+        Dominos.append(doubleSix)
     }
     
     public func takeKnuckle() -> bone? {
