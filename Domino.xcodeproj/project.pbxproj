@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE0754D12147E17500BA2664 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754D02147E17500BA2664 /* main.swift */; };
+		FE0754D92147E1D200BA2664 /* bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754D82147E1D200BA2664 /* bone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		FE0754CD2147E17500BA2664 /* Domino */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Domino; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0754D02147E17500BA2664 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FE0754D82147E1D200BA2664 /* bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,17 @@
 			isa = PBXGroup;
 			children = (
 				FE0754D02147E17500BA2664 /* main.swift */,
+				FE0754D72147E18C00BA2664 /* game */,
 			);
 			path = Domino;
+			sourceTree = "<group>";
+		};
+		FE0754D72147E18C00BA2664 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				FE0754D82147E1D200BA2664 /* bone.swift */,
+			);
+			path = game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE0754D12147E17500BA2664 /* main.swift in Sources */,
+				FE0754D92147E1D200BA2664 /* bone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
