@@ -11,6 +11,9 @@
 		FE0754D92147E1D200BA2664 /* bone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754D82147E1D200BA2664 /* bone.swift */; };
 		FE0754DB214811A600BA2664 /* setDominoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754DA214811A600BA2664 /* setDominoes.swift */; };
 		FE0754DD2148137300BA2664 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754DC2148137300BA2664 /* player.swift */; };
+		FE0754DF2148371600BA2664 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0754DE2148371600BA2664 /* Game.swift */; };
+		FE2966C12149A30600D912CD /* multiPlaer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2966C02149A30600D912CD /* multiPlaer.swift */; };
+		FE63C52521497C850096A240 /* turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63C52421497C850096A240 /* turn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,9 @@
 		FE0754D82147E1D200BA2664 /* bone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bone.swift; sourceTree = "<group>"; };
 		FE0754DA214811A600BA2664 /* setDominoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setDominoes.swift; sourceTree = "<group>"; };
 		FE0754DC2148137300BA2664 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		FE0754DE2148371600BA2664 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FE2966C02149A30600D912CD /* multiPlaer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiPlaer.swift; sourceTree = "<group>"; };
+		FE63C52421497C850096A240 /* turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				FE0754D82147E1D200BA2664 /* bone.swift */,
+				FE63C52421497C850096A240 /* turn.swift */,
+				FE0754DE2148371600BA2664 /* Game.swift */,
 				FE0754DA214811A600BA2664 /* setDominoes.swift */,
 				FE0754DC2148137300BA2664 /* player.swift */,
+				FE2966C02149A30600D912CD /* multiPlaer.swift */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -136,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2966C12149A30600D912CD /* multiPlaer.swift in Sources */,
 				FE0754DD2148137300BA2664 /* player.swift in Sources */,
+				FE0754DF2148371600BA2664 /* Game.swift in Sources */,
+				FE63C52521497C850096A240 /* turn.swift in Sources */,
 				FE0754D12147E17500BA2664 /* main.swift in Sources */,
 				FE0754D92147E1D200BA2664 /* bone.swift in Sources */,
 				FE0754DB214811A600BA2664 /* setDominoes.swift in Sources */,

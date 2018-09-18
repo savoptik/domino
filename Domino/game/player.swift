@@ -10,16 +10,13 @@ import Foundation
 
 // игрок наследуется от "базара", он имеет имя, может брать из "базара" костяжки, и выдавать костяжку, если у него есть подходящая.
 public class playr: setOfBones {
-    private let name: String
+    public let name: String
     
     // принимаем в конструкторе имя игорька
     public init(playerName: String) {
         // записываем его в приватное поле
         self.name = playerName
     }
-    
-    // метод вернёт имя игорька
-    public func playerName() -> String {return name}
     
     // метод принимает объект "базара" и берёт из него костяшку
     public func askForBone(bones: setOfBones) {
@@ -68,5 +65,23 @@ public class playr: setOfBones {
         let res: bone = Dominos[resultIndex]
         Dominos.remove(at: resultIndex)
         return res
+    }
+    
+    public func minBone() -> bone {
+        var minSum = Dominos[0].left + Dominos[0].right
+        var returnIndex = 0
+        for i in 0...Dominos.count-1 {
+            if (Dominos[i].left + Dominos[i].right) < minSum {
+                returnIndex = i
+                    minSum = Dominos[i].left + Dominos[i].right
+            }
+        }
+        let returnBone = Dominos[returnIndex]
+        Dominos.remove(at: returnIndex)
+        return returnBone
+    }
+    
+    public func askForBone(bone: bone) {
+        Dominos.append(bone)
     }
 }
