@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
+let names = ["Трус", "Балбес", "бывалый"]
+let gameDomino: game = game.init(gName: "Новая игра", ps: multiPlayer.init(namePlayers: names))
+gameDomino.play()
 

@@ -10,7 +10,6 @@ import Foundation
 
 public class setOfBones {
     var Dominos: [bone] = []
-    
     public init() {
         // заполняем "базар" костяшками, должно быть 28
         for i in 0...6 {
@@ -34,5 +33,13 @@ public class setOfBones {
         Dominos.remove(at: Int(number))
         // возвращаем костяшку
         return returnBone
+    }
+    
+    public func empty() -> Bool {
+        if Dominos.count == 0 {
+            return true
+        } else {
+            return false
+        }
     }
 }

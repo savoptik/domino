@@ -24,4 +24,14 @@ public class multiPlayer {
             self.turnIndex += 1
         }
     }
+    
+    public func playersNoEmpty() -> Int {
+        var result: Int = 0
+        for i in 0...players.count-1 {
+            if self.players[i].Dominos.count == 0 {
+                result += 1
+            }
+        }
+        return result
+    }
 }
